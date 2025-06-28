@@ -19,12 +19,39 @@
       ctx.arc(x,y,r,0,6.3);
       ctx.stroke()
     }
-    circle(400,400,300);
-    circle(500,500,100);
-    circle(600,600,500);
 
-    circle(400,400,5);
-    circle(400,420,30);
+    function kandinsky() {
+      circle(400,400,300);
+      circle(500,500,100);
+      circle(600,600,500);
+
+      circle(400,400,5);
+      circle(400,420,30);
+    }
+
+    function line(x1,y1,x2,y2) {
+      ctx.beginPath();
+      ctx.moveTo(x1,y1);
+      ctx.lineTo(x2,y2);
+      ctx.stroke();
+    }
+
+    function lineM() {
+      line(160*0,800,800,800-160*0);
+      line(160*1,800,800,800-160*1);
+      line(160*2,800,800,800-160*2);
+      line(160*3,800,800,800-160*3);
+      line(160*4,800,800,800-160*4);
+      line(160*5,800,800,800-160*5);
+    }
+
+    for(let x=0; x<11;x++) {
+      line(40*x,400,400,400-40*x);
+      line(800-40*x,400,400,400-40*x);
+      line(800-40*x,400,400,400+40*x);
+      line(40*x,400,400,400+40*x);
+      
+    }
 
   </script>
 </html>
