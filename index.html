@@ -1,0 +1,30 @@
+<html>
+  <head>
+
+  </head>
+  <body style="background-color: lemonchiffon;">
+    <canvas id="canvas1"
+      width="800" 
+      height="800" 
+      style="background-color: aliceblue;width: 800px; height:800px" >
+    </canvas>
+
+  </body>
+  <script>
+    const canvas = document.querySelector("#canvas1");
+    const ctx = canvas.getContext("2d");
+    
+    function circle(x,y,r) {
+      ctx.beginPath();
+      ctx.arc(x,y,r,0,6.3);
+      ctx.stroke()
+    }
+    circle(400,400,300);
+    circle(500,500,100);
+    circle(600,600,500);
+
+    circle(400,400,5);
+    circle(400,420,30);
+
+  </script>
+</html>
